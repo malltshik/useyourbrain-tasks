@@ -25,3 +25,15 @@ You have to decide how many paths you might to use to going from bottom to top
 In that example return value will be 2, because you could finish starts by one step from bottom to top
 and by two steps from 0 to 1 stair and next step would be from 1 to 2 stair
 ```
+
+- HopTowers
+
+```text
+In this task you get an array of tower where each element means high of tower
+High of tower at the same time means how many steps you allow to do
+For instance:
+Given [1,2,0,3]
+From index 0 at the first tower which high is 1 you allow to do only one step
+From index 1 at the second tower which high is 2 you allow to do 2 steps or less (to third or fourth tower)
+Therefore you need return true if towers in possible to hopped over the end and false at the other way
+```
