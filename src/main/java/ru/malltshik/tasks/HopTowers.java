@@ -8,13 +8,12 @@ package ru.malltshik.tasks;
  * Given [1,2,0,3]
  * From index 0 at the first tower which high is 1 you allow to do only one step
  * From index 1 at the second tower which high is 2 you allow to do 2 steps or less (to third or fourth tower)
- *
+ * <p>
  * Therefore you need return true if towers in possible to hopped over the end and false at the other way
- *
  */
 class HopTowers {
 
-    static boolean isHoppable(int[] towers){
+    static boolean isHoppable(int[] towers) {
         return isHoppable(towers, 0);
     }
 
