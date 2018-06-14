@@ -40,5 +40,10 @@ Therefore you need return true if towers in possible to hopped over the end and 
 
 - 2048 Game
 ```text
-Everybody knows this game. You could run Game class and play ;)
+Everybody knows this game. You could run main method in Game class and play ;)
+```
+
+- Kalah Game
+```
+In progress. 
 ```
