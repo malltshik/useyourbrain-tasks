@@ -1,4 +1,4 @@
-package ru.malltshik.tasks.game2048.models;
+package ru.malltshik.tasks.games.game2048.models;
 
 public class Cell {
     private int value = 2;

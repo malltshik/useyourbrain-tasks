@@ -1,8 +1,8 @@
-package ru.malltshik.tasks.game2048;
+package ru.malltshik.tasks.games.game2048;
 
-import ru.malltshik.tasks.game2048.exceptions.GameOverException;
-import ru.malltshik.tasks.game2048.models.Field;
-import ru.malltshik.tasks.game2048.models.Window;
+import ru.malltshik.tasks.games.exceptions.GameOverException;
+import ru.malltshik.tasks.games.game2048.models.Field;
+import ru.malltshik.tasks.games.game2048.models.Window;
 
 
 // TODO refactorings algorithms (less time & ram complexity)

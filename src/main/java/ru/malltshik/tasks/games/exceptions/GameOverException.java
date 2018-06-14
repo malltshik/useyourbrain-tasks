@@ -1,4 +1,4 @@
-package ru.malltshik.tasks.game2048.exceptions;
+package ru.malltshik.tasks.games.exceptions;
 
 public class GameOverException extends Exception {
     public GameOverException(String message) {

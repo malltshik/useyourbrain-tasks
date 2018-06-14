@@ -1,7 +1,7 @@
-package ru.malltshik.tasks.game2048.models;
+package ru.malltshik.tasks.games.game2048.models;
 
-import ru.malltshik.tasks.game2048.enums.Direction;
-import ru.malltshik.tasks.game2048.exceptions.GameOverException;
+import ru.malltshik.tasks.games.game2048.enums.Direction;
+import ru.malltshik.tasks.games.exceptions.GameOverException;
 
 import java.awt.*;
 import java.util.ArrayList;

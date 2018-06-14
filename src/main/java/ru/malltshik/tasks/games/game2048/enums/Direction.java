@@ -1,6 +1,4 @@
-package ru.malltshik.tasks.game2048.enums;
-
-import ru.malltshik.tasks.game2048.models.Cell;
+package ru.malltshik.tasks.games.game2048.enums;
 
 public enum Direction {
     UP(-1,0), DOWN(1,0), RIGHT(0,1), LEFT(0,-1);
