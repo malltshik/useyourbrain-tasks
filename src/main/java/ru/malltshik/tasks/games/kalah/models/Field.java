@@ -1,5 +1,7 @@
 package ru.malltshik.tasks.games.kalah.models;
 
+import ru.malltshik.tasks.games.exceptions.GameOverException;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -18,7 +20,7 @@ public class Field {
         isFirstPlayer = new Random().nextBoolean();
     }
 
-    public void move(int index) {
+    public void move(int index) throws GameOverException {
         // pass turn if not allowed
         if (!isAllowedIndex(index) || pits.get(index) == 0) return;
         // count of stones in pit
@@ -38,6 +40,11 @@ public class Field {
         stillStones(lastIndex);
         setNextPlayerTurn(lastIndex);
         // TODO  check win statement
+        if(isFirstPlayer && (this.pits.get(6) > 36 || this.pits.subList(0,6).stream().mapToInt(i -> i).sum() == 0)) {
+            throw new GameOverException("First player win!");
+        } else if(!isFirstPlayer && (this.pits.get(6) > 36 || this.pits.subList(7,13).stream().mapToInt(i -> i).sum() == 0)) {
+            throw new GameOverException("Second player win!");
+        }
     }
 
     /**
@@ -48,11 +55,10 @@ public class Field {
     private void stillStones(int lastIndex) {
         Integer count = this.pits.get(lastIndex);
         if (count != 1 || !isCurrentPlayersPit(lastIndex)) return;
-        // TODO implement this function
-        // if last at index 0 -> still stones from 12
-        // if last at index 1 -> still stones from 11
-        // ...
-        // if last at index 12 -> still stones from 0
+        int oppositeIndex = 12 - lastIndex;
+        int kalahIndex = isFirstPlayer ? 6 : 13;
+        this.pits.set(kalahIndex, this.pits.get(kalahIndex) + this.pits.get(oppositeIndex));
+        this.pits.set(oppositeIndex, 0);
     }
 
     /**
@@ -78,7 +84,6 @@ public class Field {
     private boolean isAllowedIndex(int index) {
         return !(index < 0 || index == 6 || index >= 13) && isCurrentPlayersPit(index);
     }
-
 
     private boolean isCurrentPlayersPit(int index) {
         return isPlayersPit(index, isFirstPlayer);
