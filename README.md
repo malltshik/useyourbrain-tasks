@@ -42,6 +42,24 @@ Therefore you need return true if towers in possible to hopped over the end and 
 
 ```text
 File system tree build task.
+Output result kind of: 
+└── /
+    ├── usr
+    │   └── local
+    │       ├── bin
+    │       │   └── my.conf
+    │       └── share
+    │           └── apache
+    │               └── vhost.conf
+    ├── tmp
+    │   └── trash
+    │       └── remove_me.txt
+    └── home
+        ├── charley
+        │   └── tasks.txt
+        └── john
+            ├── Node.java
+            └── FSTask.java
 ```
 
 - 2048 Game
