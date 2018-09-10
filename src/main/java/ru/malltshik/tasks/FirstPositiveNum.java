@@ -8,7 +8,7 @@ package ru.malltshik.tasks;
  * For example, the input [2, 4, -1, 1] should give 3. The input [1, 2, 0] should give 3.
  *
  */
-public class DailyCodingProblem4 {
+public class FirstPositiveNum {
 
     // TODO this implementation is quasilinear O(N log N)
     // But linear is possible. Think

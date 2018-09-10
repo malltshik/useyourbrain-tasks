@@ -7,12 +7,12 @@ import java.util.Objects;
  * Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
  * <p>
  * For example, given the following Node class
- *  class Node:
- *      def __init__(self, val, left=None, right=None):
- *          self.val = val
- *          self.left = left
- *          self.right = right
- *
+ * class Node:
+ * def __init__(self, val, left=None, right=None):
+ * self.val = val
+ * self.left = left
+ * self.right = right
+ * <p>
  * The following test should pass:
  * node = Node('root', Node('left', Node('left.left')), Node('right'))
  * assert deserialize(serialize(node)).left.left.val == 'left.left'
@@ -21,10 +21,10 @@ import java.util.Objects;
 // TODO it doesn't work yet
 public class TreeTransferTask {
 
-    private final static String TEMPLATE =  "(%s%s%s)";
+    private final static String TEMPLATE = "(%s%s%s)";
 
     public static String serialize(Node node) {
-        if(node == null) return "()";
+        if (node == null) return "()";
         return String.format(TEMPLATE, node.name, serialize(node.left), serialize(node.right));
     }
 
